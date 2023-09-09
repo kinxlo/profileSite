@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="body">
+      <main class="header">
+        <!-- display picture -->
+        <div class="profile-img">
+          <img
+            data-testid="slackDisplayImage"
+            src="./assets/WhatsApp Image 2023-08-29 at 14.38.48.jpg"
+            alt="Bug"
+          />
+        </div>
+      </main>
+      <main class="card-body">
+        <section class="profile-details">
+          <!-- slack username -->
+          <div class="detail">
+            <label>Slack Name</label>
+            <p id="name" data-testid="slackUserName">Bug</p>
+          </div>
+          <!-- Day of the week -->
+          <div class="detail">
+            <label>Current day of the week</label>
+            <p id="week" data-testid="currentDayOfTheWeek">Monday</p>
+          </div>
+          <!-- Current UTC Time -->
+          <div class="detail">
+            <label>Current UTC time(ms)</label>
+            <p id="time" data-testid="currentUTCTime">00:00</p>
+          </div>
+          <!-- Current Track-->
+          <div class="detail">
+            <label>Current Track</label>
+            <p id="track" data-testid="myTrack">Frontend</p>
+          </div>
+        </section>
+        <footer class="links">
+          <!-- Github URL -->
+          <div>
+            <!-- <label>Github URL</label> -->
+            <p id="link" data-testid="githubURL">Link</p>
+          </div>
+        </footer>
+      </main>
+    </main>
+  </body>
+  <script src="./main.js"></script>
+</html>

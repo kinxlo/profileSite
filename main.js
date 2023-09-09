@@ -15,7 +15,7 @@ class Profile {
   setAttribute() {
     nameDiv.textContent = this.name;
     trackDiv.textContent = this.track;
-    linkDiv.textContent = this.githubUrl;
+    linkDiv.href = this.githubUrl;
   }
 
   getDayOfTheWeek() {
@@ -35,14 +35,20 @@ class Profile {
   }
 
   getTimeInMilliseconds() {
-    const now = new Date();
-    const currentTimeMillis = now.getTime();
+     const now = new Date();
 
-    return currentTimeMillis;
+     // Use the toISOString() method to get the time in the desired format
+     const currentTimeISOString = now.toISOString();
+
+     return currentTimeISOString;
   }
 }
 
-const me = new Profile(`Bug`, `Frontend`, `url`);
+const me = new Profile(
+  `Bug`,
+  `Frontend`,
+  `https://github.com/kinxlo/profileSite`
+);
 me.setAttribute();
 weekDiv.textContent = me.getDayOfTheWeek();
 timeDiv.textContent = me.getTimeInMilliseconds();

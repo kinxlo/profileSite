@@ -45,7 +45,7 @@ class Profile {
 }
 
 const me = new Profile(
-  `Bug`,
+  `Just Code it`,
   `Frontend`,
   `https://github.com/kinxlo/profileSite`
 );

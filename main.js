@@ -35,12 +35,10 @@ class Profile {
   }
 
   getTimeInMilliseconds() {
-     const now = new Date();
+    const currentTime = new Date();
+    const currentTimeMilliseconds = currentTime.getTime();
 
-     // Use the toISOString() method to get the time in the desired format
-     const currentTimeISOString = now.toISOString();
-
-     return currentTimeISOString;
+    return currentTimeMilliseconds;
   }
 }
 

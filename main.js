@@ -34,11 +34,15 @@ class Profile {
     return weekdays[dayIndex];
   }
 
-  getTimeInMilliseconds() {
-    const currentTime = new Date();
-    const currentTimeMilliseconds = currentTime.getTime();
+  getCurrentTimeMilliseconds() {
+    return new Date().getTime();
+  }
 
-    return currentTimeMilliseconds;
+  getTimeInMilliseconds() {
+    setInterval(function () {
+      const currentTime = new Date().getTime();
+      timeDiv.textContent = currentTime;
+    }, 1000);
   }
 }
 
@@ -49,4 +53,4 @@ const me = new Profile(
 );
 me.setAttribute();
 weekDiv.textContent = me.getDayOfTheWeek();
-timeDiv.textContent = me.getTimeInMilliseconds();
+me.getTimeInMilliseconds();

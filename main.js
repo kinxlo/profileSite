@@ -43,7 +43,7 @@ class Profile {
 }
 
 const me = new Profile(
-  `Just Code it`,
+  `Just code it`,
   `Frontend`,
   `https://github.com/kinxlo/profileSite`
 );
